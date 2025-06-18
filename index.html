@@ -4,31 +4,57 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MoodSky</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
+     <link rel="stylesheet" href="styles.css" />
+  <div class="Container">
   <body>
+  <div class="container">
     <form>
       <input type="text" placeholder="Type your city" name="city" required />
       <button type="submit">Search</button>
     </form>
-    <h1>Johannesburg</h1>
-    <p>
-      <span class="BMW1">Tuesday</span> Tuesday <span class="BMW2">13:00</span>
+
+    <h1>Johannesburg, South Africa</h1>
+    <p class="Weather-info">
+      Tuesday 13:00pm
     </p>
-    <h2>18°C ☀️ Sunny <br />High:20°C <br />Low: 16°C</h2>
-    <p>"Don't forget you sunscreen!"</p>
-    <h3>Wednesday <br />🥶 Cold <br />High:4°C <br />Low:-5°C</h3>
-    <h4>
-      Thurday <br />
-      ⛅ Partly sunny <br />
-      High:18°C <br />
-      Low:24°C
-    </h4>
-    <h5>
-      Friday <br />☀️ Sunny <br />>High:20°C <br />
-      Low: 16°C
-    </h5>
-    <button>Dark Mode</button>
-  </body>
+<div class="row row1">
+    <div class="inner-container1">
+      <h2>18°C ☀️ Sunny</h2>
+      <p class="Audi">High: 20°C <br />Low: 16°C</p>
+    </div>
+
+    <div class="inner-container2">
+      <p class="Audi2">"Don't forget your sunscreen!"</p>
+    </div>
+    </div>
+<div class="row row2">
+    <div class="inner-container3">
+      <h3>Wednesday</h3>
+      <p class="VW1">🥶 Cold <br />High: 4°C <br />Low: -5°C</p>
+    </div>
+
+    <div class="inner-container4">
+      <h4>Thursday</h4>
+      <p class="VW2">⛅ Partly sunny <br />High: 18°C <br />Low: 24°C</p>
+    </div>
+
+    <div class="inner-container5">
+      <h5>Friday</h5>
+      <p class="Porche">☀️ Sunny <br />High: 20°C <br />Low: 16°C</p>
+    </div>
+    </div>
+
+    <button onclick="changeTheme()">Dark Mode</button>
+  
+  <footer>
+    This project was coded by 
+    <a href="#">Refiloe Mzinyati</a> and is on 
+    <a href="https://github.com/RMzinyati/My-first-weather-app">Github</a> and 
+    <a href="moodsky.netlify.app">Hosted on Netlify</a>
+  </footer>
+  </div>
+
   <script src="index.js"></script>
+</body>
+</div>
 </html>
