@@ -147,7 +147,10 @@ footer a:visited {
 }
 .heat {
   color: red;
+  font-weight: bold;
 }
 .cold {
   color: blue;
+  font-weight: bold;
 }
+
