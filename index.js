@@ -72,9 +72,9 @@ function search(event) {
 function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
-  let day = date.getDay();
+  let amPm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12 || 12; // Convert to 12-hour format
   if (minutes < 10) minutes = `0${minutes}`;
-  if (hours < 10) hours = `0${hours}`;
   let days = [
     "Sunday",
     "Monday",
@@ -84,7 +84,8 @@ function formatDate(date) {
     "Friday",
     "Saturday",
   ];
-  return `${days[day]} ${hours}:${minutes}`;
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minutes} ${amPm}`;
 }
 
 let searchForm = document.querySelector("#search-form");
