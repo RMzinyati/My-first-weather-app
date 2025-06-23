@@ -31,8 +31,12 @@ function displayForecast(forecast) {
           ${getEmoji(day.condition.description)} ${
       day.condition.description
     }<br/>
-          High: ${Math.round(day.temperature.maximum)}°C<br/>
-          Low: ${Math.round(day.temperature.minimum)}°C
+          🌡️High: <span class="heat">${Math.round(
+            day.temperature.maximum
+          )}°C</span><br/>
+          🌡️Low: <span class="cold">${Math.round(
+            day.temperature.minimum
+          )}°C</span>
         </p>
       </div>
     `;
@@ -51,9 +55,14 @@ function displayWeather(response) {
     <h2>${Math.round(current.temperature.day)}°C ${getEmoji(
     current.condition.description
   )} ${current.condition.description}</h2>
-    <p class="Audi">High: ${Math.round(
-      current.temperature.maximum
-    )}°C <br />Low: ${Math.round(current.temperature.minimum)}°C</p>
+    <p class="Audi">
+      🌡️High: <span class="heat">${Math.round(
+        current.temperature.maximum
+      )}°C</span><br/>
+      🌡️Low: <span class="cold">${Math.round(
+        current.temperature.minimum
+      )}°C</span>
+    </p>
   `;
 
   displayForecast(response.data);
@@ -73,7 +82,7 @@ function formatDate(date) {
   let minutes = date.getMinutes();
   let hours = date.getHours();
   let amPm = hours >= 12 ? "PM" : "AM";
-  hours = hours % 12 || 12; // Convert to 12-hour format
+  hours = hours % 12 || 12;
   if (minutes < 10) minutes = `0${minutes}`;
   let days = [
     "Sunday",
