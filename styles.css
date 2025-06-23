@@ -145,3 +145,9 @@ footer a:visited {
   font-style: italic;
   font-size: 22px;
 }
+.heat {
+  color: red;
+}
+.cold {
+  color: blue;
+}
